@@ -1,0 +1,9 @@
+aws cloudformation create-stack --template-body file://ecs-cluster.template --stack-name EcsClusterStack --capabilities CAPABILITY_IAM --tags Key=Name,Value=ECS --region ap-southeast-2 --parameters ParameterKey=KeyName,ParameterValue=HieuKeyMrLeQuangHieuSub ParameterKey=EcsCluster,ParameterValue=getting-started ParameterKey=AsgMaxSize,ParameterValue=2
+
+aws cloudformation create-stack --template-body file://ecs-jenkins-demo.template --stack-name JenkinsStack --capabilities CAPABILITY_IAM --tags Key=Name,Value=Jenkins --region ap-southeast-2 --parameters ParameterKey=EcsStackName,ParameterValue=EcsClusterStack
+
+ssh -i ~/Documents/Work/Optus/HieuKeyMrLeQuangHieuSub.pem ec2-user@ec2-13-54-165-149.ap-southeast-2.compute.amazonaws.com
+
+3970a681d5f847f183f01e158acef952
+
+266879338329.dkr.ecr.ap-southeast-2.amazonaws.com/hello-world
