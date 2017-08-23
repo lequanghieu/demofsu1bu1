@@ -13,6 +13,7 @@ Build and run using Docker Compose:
 	$ cd dockercloud-hello-world
 	$ docker-compose up
 
+Hello world part 2.
 
 ## Deploying to Docker Cloud
 
